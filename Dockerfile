@@ -1,4 +1,6 @@
-FROM dmitrymomot/php-cli
+FROM myorb/docker-php-kit
+
+MAINTAINER "Alex ZeroDay" <itdep@gmail.com>
 
 WORKDIR /tmp
 
@@ -10,9 +12,9 @@ RUN apt-get update -y && \
     apt-get remove --purge curl -y && \
     apt-get clean
 
-RUN mkdir -p /data/www
+RUN mkdir -p /data
 VOLUME ["/data"]
-WORKDIR /data/www
+WORKDIR /dataw
 
 ENTRYPOINT ["composer"]
 CMD ["--help"]
