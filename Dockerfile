@@ -14,7 +14,7 @@ RUN apt-get update -y && \
 
 RUN mkdir -p /data
 VOLUME ["/data"]
-WORKDIR /dataw
+WORKDIR /data
 
 ENTRYPOINT ["composer"]
 CMD ["--help"]
