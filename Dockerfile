@@ -9,6 +9,7 @@ RUN apt-get update -y && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
     composer self-update && \
+    php5-intl && \
     apt-get remove --purge curl -y && \
     apt-get clean
 
