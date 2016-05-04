@@ -9,6 +9,7 @@ RUN apt-get update -y && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
     composer self-update && \
+    composer global require "fxp/composer-asset-plugin:*" &&\
     apt-get remove --purge curl -y && \
     apt-get clean
 
